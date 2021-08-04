@@ -9,10 +9,12 @@ const MathTools = {
 
     ceil: (x: number) => {
         if((x | 0) === x) return x
+        if (x < 0) return (x | 0)
         return (x | 0) + 1
     },
 
     floor : (x: number) => {
+        if (x < 0) return (x | 0) - 1
         return (x | 0)
     }
 }
