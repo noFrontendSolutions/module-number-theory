@@ -13,9 +13,14 @@ const MathTools = {
         return (x | 0) + 1
     },
 
-    floor : (x: number) => {
+    floor: (x: number) => {
         if (x < 0) return (x | 0) - 1
         return (x | 0)
+    },
+
+    absolute: (x: number) => {
+        if (x < 0) return -x
+    return x
     }
 }
 
