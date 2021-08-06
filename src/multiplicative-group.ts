@@ -3,7 +3,7 @@ import {isPrime} from "./is-prime"
 
 const multiplicativeGroup = (x: number) => {
     let coprimesTemp: number[] = [1]
-    if (Number.isInteger(x) === false || x < 0) return undefined
+    if (Number.isInteger(x) === false || x < 0) return null
     if (isPrime(x)) {
         for (let j =2; j < x; j++) {
             coprimesTemp.push(j)

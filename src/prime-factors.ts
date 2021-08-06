@@ -3,7 +3,7 @@ import { MathTools } from "./math-tools"
 
 const primeFactors = (x: number) => {
     let primeFactorsTemp: number[] = [] 
-    if (x < 0 || Number.isInteger(x) === false) return undefined
+    if (x < 0 || Number.isInteger(x) === false) return null
     for (let i = 2; i <= MathTools.ceil(x / 2); i++) {
         if (isPrime(i) && (x % i === 0)) primeFactorsTemp.push(i)
     }

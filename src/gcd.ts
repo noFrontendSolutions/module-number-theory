@@ -1,7 +1,7 @@
 import {MathTools} from "./math-tools"
 
 const gcd = (x: number, y: number) => {
-    if (Number.isInteger(x) === false || Number.isInteger(y) === false) return undefined
+    if (Number.isInteger(x) === false || Number.isInteger(y) === false) return null
     let gcdTemp = 1
     let xAbsolute = MathTools.absolute(x)
     let yAbsolute = MathTools.absolute(y)
