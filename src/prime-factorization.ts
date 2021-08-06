@@ -1,8 +1,9 @@
 import { primeFactors } from "./prime-factors";
+type NumberPair = [number, number]
 
 const primeFactorization = (x: number) => {
     if (x < 0 || Number.isInteger(x) === false) return undefined
-    let primeFactorizationTemp: any[] = [] 
+    let primeFactorizationTemp: NumberPair[] = [] 
     let xPrimeFactors = primeFactors(x)
     if (xPrimeFactors) {
         for(const e of xPrimeFactors) {
