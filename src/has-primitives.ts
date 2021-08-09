@@ -1,6 +1,6 @@
 import { primeFactors } from "./prime-factors";
 
-const isCyclic = (x: number) =>  {
+const hasPrimitives = (x: number) =>  {
     if (x < 0 || Number.isInteger(x) === false) return null
     let xPrimeFactors = primeFactors(x)
     if (x === 2 || x === 4) return true
@@ -10,4 +10,4 @@ const isCyclic = (x: number) =>  {
     return false
 }
 
-export {isCyclic}
+export {hasPrimitives}
