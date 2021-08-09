@@ -2,7 +2,7 @@ import { hasPrimitives } from "./has-primitives"
 import { multiplicativeGroup } from "./multiplicative-group"
 import { MathTools } from "./math-tools"
 
-//I didn't import eulerPhi because it's implicitly calculated by multiplicativeGroup(x).length
+//I didn't import eulerPhi because it's implicitly calculated by multiplicativeGroup(x).length (see below).
 
 const smallestPrimitive = (x: number) => {
     if (x < 0 || Number.isInteger(x) === false || hasPrimitives(x) === false) return null

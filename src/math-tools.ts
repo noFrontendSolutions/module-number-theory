@@ -23,7 +23,7 @@ const MathTools = {
     return x
     },
 
-    //the optional third argument of power fct calculates the power modulo the choosen number.
+    //the optional third argument of the power function calculates the power modulo the choosen third argument. Power(., ., mod) gets reduced to its modulo-representative in every step of the for-loop and thereby avoids calculating and storing large numbers, unlike the standard Math.pow() function would.  
     power: (base: number, exponent: number, mod: number | null = null) => {
         if (Number.isInteger(exponent) === false || exponent < 0) return null
         let tempValue = 1
