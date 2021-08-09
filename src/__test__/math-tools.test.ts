@@ -33,8 +33,9 @@ test('returns absolute value', () => {
     expect(MathTools.absolute(-25.3)).toEqual(25.3)
 })
 
-test('returns n-th power of base', () => {
+test('returns n-th power of base modulo the third argument (which is optional)', () => {
   expect(MathTools.power(2, 4)).toEqual(16)
   expect(MathTools.power(3, 4)).toEqual(81)
   expect(MathTools.power(7, 7, 22)).toEqual(17)
+  expect(MathTools.power(2, 5, 16)).toEqual(0)
 })
