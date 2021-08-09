@@ -23,7 +23,7 @@ const MathTools = {
     return x
     },
 
-    //third argument of power fct calculates power modulo that number. This can be very useful for large exponents to avoid number overflow. 
+    //the optional third argument of power fct calculates the power modulo the choosen number.
     power: (base: number, exponent: number, mod: number | null = null) => {
         if (Number.isInteger(exponent) === false || exponent < 0) return null
         let tempValue = 1
