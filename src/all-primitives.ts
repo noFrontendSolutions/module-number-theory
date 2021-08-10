@@ -6,18 +6,18 @@ import { MathTools } from "./math-tools";
 
 const allPrimitives = (x: number) => {
     if (x < 0 || Number.isInteger(x) === false || hasPrimitives(x) === false) return null
-    let smallestPrimitiveOfX = smallestPrimitive(x)
+    let smallestPrimitiveModX = smallestPrimitive(x)
     let eulerPhiOfX = eulerPhi(x)
-    let allPrimitivesOfX: number[] = [smallestPrimitiveOfX!]
+    let allPrimitivesModX: number[] = [smallestPrimitiveModX!]
     let tempPrimitive: number | null
     for (let i = 2 ; i <= eulerPhiOfX!; i++) {
         if (gcd(i, eulerPhiOfX!) === 1) {
-        tempPrimitive = MathTools.power(smallestPrimitiveOfX!, i, x)
-        allPrimitivesOfX.push(tempPrimitive!)
+        tempPrimitive = MathTools.power(smallestPrimitiveModX!, i, x)
+        allPrimitivesModX.push(tempPrimitive!)
         }
     }
-    allPrimitivesOfX.sort((a,b) => a - b)
-    return allPrimitivesOfX
+    allPrimitivesModX.sort((a,b) => a - b)
+    return allPrimitivesModX
 }
 
 export {allPrimitives}
