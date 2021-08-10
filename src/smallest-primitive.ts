@@ -1,6 +1,6 @@
 import { hasPrimitives } from "./has-primitives"
 import { multiplicativeGroup } from "./multiplicative-group"
-import { MathTools } from "./math-tools"
+import { discreteExp } from "./discrete-exp"
 
 //I didn't import eulerPhi because it's implicitly calculated by multiplicativeGroup(x).length (see below).
 
@@ -10,8 +10,8 @@ const smallestPrimitive = (x: number) => {
     let eulerPhiOfX = multiplicativeGroupArray!.length
     for (let e of multiplicativeGroupArray!) { 
         for (let i = 2; i <= eulerPhiOfX; i++) {
-            if(e === 1 || (MathTools.power(e, i, x) === 1 && i !== eulerPhiOfX)) break
-            if(MathTools.power(e, i, x) === 1 && i === eulerPhiOfX) return e
+            if(e === 1 || (discreteExp(e, i, x) === 1 && i !== eulerPhiOfX)) break
+            if(discreteExp(e, i, x) === 1 && i === eulerPhiOfX) return e
         }
     }
     return null

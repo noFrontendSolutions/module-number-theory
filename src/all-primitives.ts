@@ -2,7 +2,7 @@ import { smallestPrimitive } from "./smallest-primitive";
 import { gcd } from "./gcd";
 import { eulerPhi } from "./euler-phi";
 import { hasPrimitives } from "./has-primitives";
-import { MathTools } from "./math-tools";
+import { discreteExp } from "./discrete-exp";
 
 const allPrimitives = (x: number) => {
     if (x < 0 || Number.isInteger(x) === false || hasPrimitives(x) === false) return null
@@ -12,7 +12,7 @@ const allPrimitives = (x: number) => {
     let tempPrimitive: number | null
     for (let i = 2 ; i <= eulerPhiOfX!; i++) {
         if (gcd(i, eulerPhiOfX!) === 1) {
-        tempPrimitive = MathTools.power(smallestPrimitiveModX!, i, x)
+        tempPrimitive = discreteExp(smallestPrimitiveModX!, i, x)
         allPrimitivesModX.push(tempPrimitive!)
         }
     }
