@@ -11,7 +11,7 @@ const allPrimitives = (x: number) => {
     let allPrimitivesOfX: number[] = [smallestPrimitiveOfX!]
     let tempPrimitive: number | null
     for (let i = 2 ; i <= eulerPhiOfX!; i++) {
-        if (gcd(i, eulerPhiOfX!) === 1) { //possibleOrders.push(i)
+        if (gcd(i, eulerPhiOfX!) === 1) {
         tempPrimitive = MathTools.power(smallestPrimitiveOfX!, i, x)
         allPrimitivesOfX.push(tempPrimitive!)
         }
