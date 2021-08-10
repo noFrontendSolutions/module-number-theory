@@ -14,6 +14,7 @@ const smallestPrimitive = (x: number) => {
             if(MathTools.power(e, i, x) === 1 && i === eulerPhiOfX) return e
         }
     }
+    return null
 }
 
 export {smallestPrimitive}
