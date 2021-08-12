@@ -1,11 +1,15 @@
 {
   "name": "module-number-theory",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/cjs/number-theory.js",
+  "module": "./lib/esm/number-theory.js",
+  "files": [
+    "lib/"
+  ],
   "scripts": {
     "test": "jest",
-    "build": "npx tsc"
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json"
   },
   "keywords": [],
   "author": "",

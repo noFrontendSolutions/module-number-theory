@@ -3,6 +3,7 @@ import { allPrimitives } from "./all-primitives"
 import { hasPrimitives } from "./has-primitives" 
 import {discreteExp} from "./discrete-exp"
 
+
 const discreteLog = (base: number, x: number, mod: number) => {
     if (Number.isInteger(base) === false || Number.isInteger(x) === false || Number.isInteger(mod) === false || base <= 0 || x <= 0 || mod <= 0 || hasPrimitives(mod) === false) return null
     let multiplicativeGroupMod = multiplicativeGroup(mod)
