@@ -5,7 +5,7 @@ The library is independent of the JavaScript **Math** object and only uses the s
 Type definitions are included.
 <br/><br/>
 
-## Installation
+## Installation:
 ---
 ```bash
 npm install module-number-theory
@@ -13,7 +13,7 @@ npm install module-number-theory
 Adds **module-number-theory** to your dependencies in your **package.json** file.
 <br><br>
 
-## Usage
+## Usage:
 ---
 
 Via Node:
@@ -39,7 +39,7 @@ discreteLog(31, 219, 1831) // returns 403 (since 31^403 = 219 mod 1831)
 ```
 <br>
 
-## Descriptions
+## Descriptions:
 ---
 <img src="https://render.githubusercontent.com/render/math?math=gcd\colon\mathbb{Z}\times\mathbb{Z}\to\mathbb{N}">
 
