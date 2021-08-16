@@ -108,10 +108,10 @@ ___
 
 <img src="https://render.githubusercontent.com/render/math?math=discreteLog\colon\mathbb{N}\times\mathbb{N}\times\mathbb{N}\to\mathbb{N}">
 
-**discreteLog(x, y, z)** returns the index k (i.e. the **discrete logarithm** modulo z) of the equation 
+**discreteLog(x, y, z)** returns the index k (i.e. the **discrete logarithm** with base x of y modulo z) of the equation 
 <img src="https://render.githubusercontent.com/render/math?math=x^k \equiv y \mod z"> 
 (returns null if no such index exists).<br>
-**Important Fact**: x needs to be a primitive root modulo z, and y has to be an element of the multiplicative group modulo z to guarantee that such an index k exists. Otherwise discreteLog() returns null.  
+**Important Fact**: x needs to be a primitive root modulo z, and y has to be an element of the multiplicative group modulo z to guarantee that such an index k exists. Otherwise discreteLog() returns null eventhough such an index might exist...which is a problem for another day.  
 
 ### Example:
 ```ts
