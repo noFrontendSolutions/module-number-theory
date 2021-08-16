@@ -1,7 +1,8 @@
 # module-number-theory
 ---
-is a small library that contains a collection of mathematical functions (type definitions are included) from the fields of number theory and modular arithmetic. <br>
-The library is independent of the JavaScript **Math** object and only uses the standard operators + * - %. 
+is a small library that contains a collection of mathematical functions from the fields of number theory and modular arithmetic. <br>
+The library is independent of the JavaScript **Math** object and only uses the standard operators + * - %. It contains a fuction to compute the **discrete logarithm** (if certain requirements are met). <br>
+Type definitions are included.
 <br/><br/>
 
 ## Installation
@@ -40,7 +41,7 @@ discreteLog(31, 219, 1831) // returns 403 (since 31^403 = 219 mod 1831)
 
 ## Descriptions
 ---
-
+<img src="https://render.githubusercontent.com/render/math?math=\mathbb{Z}\times\mathbb{Z}\to\mathbb{N}">
 **gcd**: $\mathbb{Z}\times\mathbb{Z}\to\mathbb{N}$<br>
 **gcd(x, y)** returns the greatest common devisor (gcd) of x and y.
 ___
@@ -98,7 +99,7 @@ ___
 ```ts
 import { discreteLog, discreteExp, hasPrimitives, allPrimitives, multiplicativeGroup } from "module-number-theory"
 
-// lets choose "50" as an example
+// let us choose "50" as an example
 // since 50 === 2 * 5^2 (50 is of the form 2p^k) 
 hasPrimitives(50) //returns true 
 
