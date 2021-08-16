@@ -41,58 +41,76 @@ discreteLog(31, 219, 1831) // returns 403 (since 31^403 = 219 mod 1831)
 
 ## Descriptions
 ---
-<img src="https://render.githubusercontent.com/render/math?math=\mathbb{Z}\times\mathbb{Z}\to\mathbb{N}">
-**gcd**: $\mathbb{Z}\times\mathbb{Z}\to\mathbb{N}$<br>
+<img src="https://render.githubusercontent.com/render/math?math=gcd\colon\mathbb{Z}\times\mathbb{Z}\to\mathbb{N}">
+
 **gcd(x, y)** returns the greatest common devisor (gcd) of x and y.
 ___
 
+<img src="https://render.githubusercontent.com/render/math?math=isPrime\colon\mathbb{N}\to \{true, false\}">
 
-**isPrime**: $\mathbb{N}\to$ {true, false}<br>
 **isPrime(x)** returns **true** if x is a prime number.
 ___
 
-**eulerPhi**: $\mathbb{N}\to\mathbb{N}$<br>
+<img src="https://render.githubusercontent.com/render/math?math=eulerPhi\colon\mathbb{N}\to\mathbb{N}">
+
 **eulerPhi(x)** returns the result of Euler's totient / phi function evaluated at x, i.e. the quantity of numbers that are relative prime to x.
 ___
 
-**multiplicativeGroup**: $\mathbb{N}\to$ Array\<$\mathbb{N}$> <br>
+<img src="https://render.githubusercontent.com/render/math?math=multiplicativeGroup\colon\mathbb{N}\to Array\<\mathbb{N}>">
+
 **multiplicativeGroup(x)** returns the multiplicative group of integers modulo x ( the natural numbers relative prime to x) in form of an array of natural numbers. <br> Remark: eulerPhi(x) === multiplicativeGroup(x).length()
 ___
 
-**devisors**: $\mathbb{N}\to$ Array\<$\mathbb{N}$> <br>
+<img src="https://render.githubusercontent.com/render/math?math=devisors\colon\mathbb{N}\to Array\<\mathbb{N}>">
+
 **devisors(x)** returns an array of all devisors of x.
 ___
 
-**primeFactors**: $\mathbb{N}\to$ Array\<$\mathbb{N}$> <br>
-**primeFactors(x)** returns an array of all prime devisors of x.
+<img src="https://render.githubusercontent.com/render/math?math=primeFactors\colon\mathbb{N}\to Array\<\mathbb{N}>">
+
+**primeFactors(x)** returns an array of all prime factors of x.
 ___
 
-**primeFactorization**: $\mathbb{N}\to$ Array\<$\mathbb{N}\times\mathbb{N}$> <br>
+<img src="https://render.githubusercontent.com/render/math?math=primeFactorization\colon\mathbb{N}\to Array\<\mathbb{N}\times\mathbb{N}>">
+
 **primeFactors(x)** returns the prime-factorization of x in form of an array of pairs of natural numbers.
 ```ts
 primeFactorization(5440) // returns [ [2, 6], [5, 1], [17,1] ] (since 2^6 * 5^1 * 17^1 = 5440)
 ```
 ___
-**hasPrimitives**: $\mathbb{N}\to$ {true, false}<br>
+
+<img src="https://render.githubusercontent.com/render/math?math=hasPrimitives\colon\mathbb{N}\to \{true, false\}">
+
 **hasPrimitives(x)** returns **true** if there exists a primtive roots modulo x. I.e. it returns **true** if the multiplicative group of integers modulo x contains an element that is cyclic. This statement holds true if and only if x is equal to 2, 4, $p^k$, or $2p^k$, where k can be any natural number and p an odd prime.
 ___
-**primtiveCount**: $\mathbb{N}\to\mathbb{N}$<br>
+
+<img src="https://render.githubusercontent.com/render/math?math=primitiveCount\colon\mathbb{N}\to\mathbb{N}">
+
 **primitiveCount(x)** returns the quantity of primitive roots modulo x (returns 0 if there does't exist primitive roots modulo x).
 ___
 
-**smallestPrimitive**: $\mathbb{N}\to\mathbb{N}$<br>
+<img src="https://render.githubusercontent.com/render/math?math=smallestPrimitive\colon\mathbb{N}\to\mathbb{N}">
+
 **smallestPrimitive(x)** returns the smallest primitive root modulo x (returns null if there does't exist primitive roots modulo x).
 ___
 
-**allPrimitives**: $\mathbb{N}\to$ Array\<$\mathbb{N}$> <br>
+<img src="https://render.githubusercontent.com/render/math?math=allPrimitives\colon\mathbb{N}\to Array\<\mathbb{N}>">
+
 **allPrimitives(x)** returns an array of all primitive roots modulo x (returns null if there does't exist primitive roots modulo x).
 ___
 
-**discreteExp**: $\mathbb{N}\times\mathbb{N}\times\mathbb{N}\to\mathbb{N}$<br>
-**discreteExp(x, y, z)** returns the result k of the equation  $x^y \equiv k \mod z$.
+<img src="https://render.githubusercontent.com/render/math?math=discreteExp\colon\mathbb{N}\times\mathbb{N}\times\mathbb{N}\to\mathbb{N}">
+
+**discreteExp(x, y, z)** returns the result k of the equation 
+<img src="https://render.githubusercontent.com/render/math?math=x^y \equiv k \mod z">
+
 ___
-**discreteLog**: $\mathbb{N}\times\mathbb{N}\times\mathbb{N}\to\mathbb{N}$<br>
-**discreteLog(x, y, z)** returns the index k (i.e. the **discrete logarithm** modulo z) of the equation $x^k \equiv y \mod z$ (returns null if no such index exists).<br>
+
+<img src="https://render.githubusercontent.com/render/math?math=discreteLog\colon\mathbb{N}\times\mathbb{N}\times\mathbb{N}\to\mathbb{N}">
+
+**discreteLog(x, y, z)** returns the index k (i.e. the **discrete logarithm** modulo z) of the equation 
+<img src="https://render.githubusercontent.com/render/math?math=x^k \equiv y \mod z"> 
+(returns null if no such index exists).<br>
 **Important Fact**: x needs to be a primitive root modulo z, and y has to be an element of the multiplicative group modulo z to guarantee that such an index k exists. Otherwise discreteLog() returns null.  
 
 ### Example:
