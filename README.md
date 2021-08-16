@@ -1,7 +1,7 @@
 # module-number-theory
 ---
-is a small library that contains a collection of mathematical functions from the fields of number theory and modular arithmetic. <br>
-The library is independent of the JavaScript **Math** object and only uses the standard operators + * - %. It contains a fuction to compute the **discrete logarithm** (if certain requirements are met). <br>
+is a small library that contains a collection of mathematical functions from the fields of number theory and modular arithmetic. <br><br>
+The library is independent of the JavaScript **Math** object and only uses the standard operators + * - %. It contains a fuction to compute the **discrete logarithm** (if certain requirements are met). <br><br>
 Type definitions are included.
 <br/><br/>
 
@@ -53,7 +53,7 @@ ___
 
 <img src="https://render.githubusercontent.com/render/math?math=eulerPhi\colon\mathbb{N}\to\mathbb{N}">
 
-**eulerPhi(x)** returns the result of Euler's totient / phi function evaluated at x, i.e. the quantity of numbers that are relative prime to x.
+**eulerPhi(x)** returns the result of Euler's totient/phi function evaluated at x; i.e. the quantity of numbers that are relative prime to x.
 ___
 
 <img src="https://render.githubusercontent.com/render/math?math=multiplicativeGroup\colon\mathbb{N}\to Array\<\mathbb{N}>">
@@ -81,7 +81,7 @@ ___
 
 <img src="https://render.githubusercontent.com/render/math?math=hasPrimitives\colon\mathbb{N}\to \{true, false\}">
 
-**hasPrimitives(x)** returns **true** if there exists a primtive roots modulo x. I.e. it returns **true** if the multiplicative group of integers modulo x contains an element that is cyclic. This statement holds true if and only if x is equal to 2, 4, $p^k$, or $2p^k$, where k can be any natural number and p an odd prime.
+**hasPrimitives(x)** returns **true** if there exists a primtive roots modulo x. I.e. it returns **true** if the multiplicative group of integers modulo x contains an element that is cyclic. This statement holds true if and only if x is equal to 2, 4, <img src="https://render.githubusercontent.com/render/math?math=p^k">, or <img src="https://render.githubusercontent.com/render/math?math=2p^k">, where k can be any natural number and p an odd prime.
 ___
 
 <img src="https://render.githubusercontent.com/render/math?math=primitiveCount\colon\mathbb{N}\to\mathbb{N}">
