@@ -131,7 +131,7 @@ allPrimitives(50) // returns [3, 13, 17, 23, 27, 33, 37, 47]
 //for instance: basis = 17 
 discreteLog(17, 37, 50) // returns 13
 discreteExp(17, 13, 50) // returns 37
-// since 17^13 = 27 mod 50
+// since 17^13 = 37 mod 50
 
 // another example: basis 27 
 discreteLog(27, 11, 50)// returns 16
