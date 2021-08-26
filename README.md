@@ -16,7 +16,7 @@ Adds **module-number-theory** to your dependencies in your **package.json** file
 ## Usage:
 ---
 
-Import module using **require**:
+Import module using Node.js **require**:
 ```js
 const numberTheory = require("module-number-theory")
 
