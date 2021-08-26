@@ -16,7 +16,7 @@ Adds **module-number-theory** to your dependencies in your **package.json** file
 ## Usage:
 ---
 
-Via Node:
+Import module using **require**:
 ```js
 const numberTheory = require("module-number-theory")
 
@@ -24,7 +24,7 @@ numberTheory.hasPrimitives(13) // returns true
 numberTheory.allPrimitives(13) // returns [2, 6, 7, 11]
 ```
 
-Using React, Typescript or jsx/tsx files you can also use the import statement:
+or as ES6 module using **import**:
 ```ts
 import * as numberTheory from "module-number-theory"
 
@@ -73,7 +73,7 @@ ___
 
 <img src="https://render.githubusercontent.com/render/math?math=primeFactorization\colon\mathbb{N}\to Array\<\mathbb{N}\times\mathbb{N}>">
 
-**primeFactors(x)** returns the prime-factorization of x in form of an array of pairs of natural numbers.
+**primeFactorization(x)** returns the prime-factorization of x in form of an array of pairs of natural numbers.
 ```ts
 primeFactorization(5440) // returns [ [2, 6], [5, 1], [17,1] ] (since 2^6 * 5^1 * 17^1 = 5440)
 ```
