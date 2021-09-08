@@ -1,7 +1,9 @@
 # module-number-theory
 ---
 is a small library that contains a collection of mathematical functions from the fields of number theory and modular arithmetic. <br>
+
 The library is independent of the JavaScript **Math** object and only uses the standard JS operators. It contains a fuction to compute the **discrete logarithm** (if certain requirements are met). <br>
+
 I've used **TypeScript** to write the module and extensively tested it with **Jest**. 
 
 Type definitions are included.
