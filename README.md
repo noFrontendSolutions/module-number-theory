@@ -1,9 +1,12 @@
 # module-number-theory
 ---
-is a small library that contains a collection of mathematical functions from the fields of number theory and modular arithmetic. <br><br>
-The library is independent of the JavaScript **Math** object and only uses the standard JS operators. It contains a fuction to compute the **discrete logarithm** (if certain requirements are met). <br><br>
+is a small library that contains a collection of mathematical functions from the fields of number theory and modular arithmetic. <br>
+The library is independent of the JavaScript **Math** object and only uses the standard JS operators. It contains a fuction to compute the **discrete logarithm** (if certain requirements are met). <br>
+I've used **TypeScript** to write the module and extensively tested it with **Jest**. 
+
 Type definitions are included.
-<br/><br/>
+
+<br/>
 
 ## Installation:
 ---
@@ -24,7 +27,7 @@ numberTheory.hasPrimitives(13) // returns true
 numberTheory.allPrimitives(13) // returns [2, 6, 7, 11]
 ```
 
-or as ES6 module using **import**:
+or as ES-Module using **import**:
 ```ts
 import * as numberTheory from "module-number-theory"
 
